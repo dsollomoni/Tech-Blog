@@ -1,6 +1,7 @@
-const User = require('../models/User');
-const Post = require('../models/Post');
-const Comment = require('../models/Comment');
+const path = require('path')
+const User = require(path.resolve(__dirname, 'User'));
+const Post = require(path.resolve(__dirname, 'Post'));
+const Comment = require(path.resolve(__dirname, 'Comment'));
 
 User.hasMany(Post, {
    foreignKey: 'user_id'
