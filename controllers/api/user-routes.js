@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Comment, User, Post, } = require('../../models');
+const { Comment, User, Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
@@ -95,7 +95,6 @@ router.post('/login', (req, res) => {
      });
    });
  });
-
 
  router.post('/logout', withAuth, (req, res) => {
    if (req.session.loggedIn) {

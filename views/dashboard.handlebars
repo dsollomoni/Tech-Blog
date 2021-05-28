@@ -1,4 +1,3 @@
-  
 <section>
    <h2>Create New Post</h2>
 
@@ -8,7 +7,7 @@
          <input type="text" id="post-title" name="post-title" />
       </div>
       <div>
-         <label for="post-url">Tell us more</label>
+         <label for="post-url">Description</label>
          <input type="text" id="post-url" name="post-url" />
       </div>
       <button type="submit" class="btn">Create</button>
@@ -17,7 +16,7 @@
 
 {{#if posts.length}}
 <section>
-   <h2>Your Posts</h2>
+   <h2>{{user.username}}'s posts</h2>
    <div>
       <ol>
       {{#each posts as |post|}}
@@ -32,3 +31,5 @@
    </div>
 </section>
 {{/if}}
+
+<script src="/javascript/add-post.js"></script>
