@@ -1,7 +1,7 @@
 const path = require('path')
-const User = require(path.resolve(process.cwd(),'models/User'));
-const Post = require(path.resolve(process.cwd(),'models/Post'));
-const Comment = require(path.resolve(process.cwd(),'models/Comment'));
+const User = require('./User');
+const Post = require('./Post');
+const Comment = require('./Comment');
 
 User.hasMany(Post, {
    foreignKey: 'user_id'
